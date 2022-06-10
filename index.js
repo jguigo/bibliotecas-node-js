@@ -1,6 +1,7 @@
 const chalk = require("chalk");
 const fs = require("fs");
 
+
 function extraiLinks(t) {
    const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
    const arrayResultados = [];
@@ -8,7 +9,7 @@ function extraiLinks(t) {
    while ((temp = regex.exec(t)) !== null) {
       arrayResultados.push({ [temp[1]]: temp[2] });
    }
-   return arrayResultados.length === 0 ? 'não há links' : arrayResultados;
+   return arrayResultados.length === 0 ? "não há links" : arrayResultados;
 }
 
 function trataErro(erro) {
